@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-corporate-navy: #0F172A; /* Deep Slate for text and dark backgrounds */
+  --color-corporate-slate: #1E293B;
+  --color-corporate-accent: #fcd304; /* Shell Yellow */
+  --color-corporate-red: #e30613;   /* Shell Red for critical alerts */
+  --color-corporate-gray: #64748B;
+  --color-corporate-bg: #f8fafc;    /* Very light gray/slate bg */
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-corporate-bg text-corporate-navy selection:bg-corporate-accent/30;
+  }
+}
+
+/* Professional Polish Shadow & Border Patterns */
+.card-polished {
+  @apply bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 rounded-full;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+@keyframes gradient-x {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
