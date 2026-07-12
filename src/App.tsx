@@ -269,7 +269,7 @@ export default function App() {
         return (
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-corporate-navy tracking-tight">GR Status</h2>
+              <h2 className="text-2xl font-bold text-corporate-navy tracking-tight">Group Reporting Status</h2>
               <p className="text-sm text-slate-500 mt-1">Real-time visibility into entity book closures and group eliminations.</p>
             </div>
 
